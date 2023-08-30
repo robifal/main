@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { Button, Text, View, StyleSheet, TextInput } from 'react-native';
+import { Button, Text, View, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
 
 const App1 = () => {
   const [username, setUsername] = useState('');
@@ -26,10 +26,9 @@ const App1 = () => {
         secureTextEntry={true}
         placeholder='Senha'
       />
-      <Button title="Entrar" onPress={handleLogin}
-       style={styles.Button}
-      />
-      
+      <TouchableOpacity style={styles.login}>
+        <text>Login</text>
+      </TouchableOpacity>
     </View>
   );
 };
